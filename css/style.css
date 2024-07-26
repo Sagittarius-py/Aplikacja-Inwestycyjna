@@ -1,0 +1,193 @@
+/* Definicje kolorów */
+:root {
+    --primary-color: #7289DA; /* Główny kolor (przyciski, linki) */
+    --secondary-color: #99AAB5; /* Kolor pomocniczy (przyciski, linki) */
+    --accent-color: #5865F2; /* Akcent (nagłówki, elementy wyróżniające się) */
+    --background-color: #2C2F33; /* Tło */
+    --light-color: #99AAB5; /* Dodatkowy jasny kolor (tło przycisków) */
+    --dark-color: #23272A; /* Dodatkowy ciemny kolor (tekst) */
+    --text-color: #FFFFFF; /* Kolor tekstu */
+}
+
+/* Resetowanie domyślnych stylów */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Podstawowe stylowanie body */
+body {  
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+
+}
+
+.container{
+    min-width: 100%;
+    min-height: 98vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Nagłówki */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+/* Przyciski */
+button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 5px;
+}
+
+form{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    padding: 20px;
+    background: var(--dark-color);
+    box-shadow: 0 8px 32px 0 var(--dark-color);
+    backdrop-filter: blur( 14px );
+    -webkit-backdrop-filter: blur( 14px );
+    border-radius: 10px;
+    border: 1px solid var(--dark-color);
+    width: 40vw;
+    /* height: 50vh; */
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Formularze */
+input, select, textarea {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    width: 90%;
+    margin-bottom: 5px;
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--light-color);
+    opacity: 0.5;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border: 2px solid var(--accent-color);
+}
+
+/* Karty */
+.card {
+    background-color: var(--dark-color);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.card-header {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--light-color);
+}
+
+.card-body {
+    color: var(--text-color);
+}
+
+/* Tabele */
+table {
+    margin-top: 1rem;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+}
+
+table, th, td {
+    border: 1px solid var(--primary-color);
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    
+}
+
+th {
+    background-color: var(--primary-color);
+    border-right: solid 1px var(--dark-color);
+}
+
+td {
+    background-color: var(--dark-color);
+    border-right: solid 1px var(--primary-color);
+    justify-items: center;
+    align-items: center;
+}
+
+/* Linki */
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s;
+
+}
+
+a:hover {
+    color: var(--light-color);
+}
+
+/* Nagłówki stron */
+.header {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.header h1 {
+    color: var(--text-color);
+}
+
+/* Stopki */
+.footer {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    text-align: center;
+    border-top: 2px solid var(--secondary-color);
+    margin-top: 2rem;
+}
+
+.footer p {
+    color: var(--text-color);
+}
+
+/* Przyciski nawigacyjne */
+.nav-button {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 5px;
+}
+
+.nav-button:hover {
+    background-color: var(--accent-color);
+}
